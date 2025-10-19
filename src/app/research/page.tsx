@@ -2,22 +2,48 @@ export const metadata = { title: "Research" };
 
 export default function ResearchPage() {
   return (
-    <section>
-      <h1 className="text-2xl font-semibold mb-4">Research</h1>
-      <p className="text-sm text-black/70 dark:text-white/70 mb-6">
-        Skeleton overview of research areas and current projects
-      </p>
-      <ul className="space-y-3">
+    <section className="max-w-4xl mx-auto space-y-8 py-8">
+      <div className="space-y-4">
+        <h1 className="text-4xl font-bold tracking-tight">Research</h1>
+        <p className="text-lg text-black/70 dark:text-white/70 leading-relaxed">
+          Explore our research areas and current projects
+        </p>
+      </div>
+      
+      <div className="grid grid-cols-1 gap-6 pt-6">
         {[
-          "Area 1: Short description.",
-          "Area 2: Short description.",
-          "Area 3: Short description.",
+          { 
+            title: "Research Area 1", 
+            desc: "Short description of this research area and its key objectives.",
+            icon: "🔬"
+          },
+          { 
+            title: "Research Area 2", 
+            desc: "Short description of this research area and its key objectives.",
+            icon: "📈"
+          },
+          { 
+            title: "Research Area 3", 
+            desc: "Short description of this research area and its key objectives.",
+            icon: "💡"
+          },
         ].map((item) => (
-          <li key={item} className="rounded-md border border-black/10 dark:border-white/10 p-4">
-            {item}
-          </li>
+          <div 
+            key={item.title} 
+            className="rounded-xl border border-black/10 dark:border-white/10 p-6 bg-white/50 dark:bg-white/5 hover:border-black/20 dark:hover:border-white/20 transition-colors"
+          >
+            <div className="flex items-start gap-4">
+              <div className="text-3xl">{item.icon}</div>
+              <div className="space-y-2">
+                <h2 className="text-xl font-semibold">{item.title}</h2>
+                <p className="text-black/70 dark:text-white/70 leading-relaxed">
+                  {item.desc}
+                </p>
+              </div>
+            </div>
+          </div>
         ))}
-      </ul>
+      </div>
     </section>
   );
 }
