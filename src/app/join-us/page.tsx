@@ -14,12 +14,10 @@ export default function JoinUsPage() {
         <div className="rounded-xl border border-black/10 dark:border-white/10 p-6 bg-white/50 dark:bg-white/5">
           <h2 className="text-xl font-semibold mb-3">Open Positions</h2>
           <p className="text-black/70 dark:text-white/70 leading-relaxed mb-4">
-            We currently have openings for PhD students, postdocs, and research assistants.
+            You can find our current openings here:
           </p>
           <ul className="space-y-2 text-black/70 dark:text-white/70">
-            <li>• PhD Student positions</li>
-            <li>• Postdoctoral Fellow positions</li>
-            <li>• Research Assistant opportunities</li>
+            <li>• No current positions</li>
           </ul>
         </div>
         

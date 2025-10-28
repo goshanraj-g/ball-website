@@ -11,7 +11,7 @@ export default function PeoplePage() {
       </div>
       
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 pt-6">
-        {["Principal Investigator", "Postdoc", "PhD Student", "MS Student"].map(
+        {["Principal Investigator", "PhD Student", "Undergraduate Researcher"].map(
           (role) => (
             <div
               key={role}
